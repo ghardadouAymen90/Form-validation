@@ -42,7 +42,7 @@ function checkPassword() {
     let password = document.querySelector("#inputPassword").value
     let secondPassword = document.querySelector("#retypePassword").value
     let arrPass = password.split('')
-    if ((password == secondPassword) && (password.length <= 20) && (password.length > 4) && (/[A-Z]/.test(password)) && (extractNumber(password).length > 0) && checkSpecialCaracter())
+    if ((password == secondPassword) && (password.length <= 40) && (password.length > 7) && (/[A-Z]/.test(password)) && (extractNumber(password).length > 0) && checkSpecialCaracter())
         return true
     else return false
 }//End of controlling password Input
@@ -104,6 +104,10 @@ document.addEventListener("click", function (event) {
     if (event.target.className == 'btn verification text-white') {
         let adress1 = document.querySelector("#inputAddress").value
         let adress2 = document.querySelector("#inputAddress2").value
+        let country = document.querySelector("#inputCountry").value
+        let city = document.querySelector("#inputCity").value
+        let state = document.querySelector("#inputState").value
+        
 
         if (checkEmail() == false) {
             return alert('Please check your Email adress an retyped email')
@@ -112,9 +116,23 @@ document.addEventListener("click", function (event) {
         if (checkPassword() == false) {
             return alert('Please check if password and retyped password are correct!')
         }
-
+        if (adress1=="") {
+            return alert('Your must enter your adress')
+        }
         if ((adress1.length >= 30) || (adress2.length >= 30)) {
             return alert('Your adress is too long')
+        }
+        
+        if (city=="") {
+            return alert('Your must enter your city')
+        }
+
+        if (state=="") {
+            return alert('Your must enter your state')
+        }
+
+        if (country=="") {
+            return alert('Your must enter your country')
         }
 
         if (checkZip() == false) {
