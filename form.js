@@ -90,9 +90,8 @@ function checkEmail() {
         else if (email[1].split('').includes(".")) {
             var part2 = email[1].split('.')
             if ((part2.length > 2) || part2.length == 1) return false;
-            else if (((part2[1] == "com") || (part2[1] == "fr")) && secondEmail==copie && (/[!@#$%^&*(),.?":{}|<>]/g.test(email[0]) == false) ) return true;
+            else if (((part2[1] == "com") || (part2[1] == "fr")) && secondEmail==copie && (/[!@#$%^&*(),.?":{}|<>]/g.test(email[0]) == false) && (/[!@#$%^&*(),.?":{}|<>]/g.test(part[0]) == false)  ) return true;
         }
-    }
     return false
 }
 
