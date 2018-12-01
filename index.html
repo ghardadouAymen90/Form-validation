@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Form validation</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container px-5">
+        <div class="container  mx-auto">
+            <form>
+                <!-- Row 1 -->
+                <div class="form-row">
+                    <div class="form-group col-md-6 js-hide-label">
+                        <label for="inputEmail"> Needed Email format : exemple@domaine.com || exemple@domaine.fr</label>
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-6 js-hide-label">
+                        <label for="RetypeEmail">Retype your Email</label>
+                        <input type="text" class="form-control" id="RetypeEmail" placeholder="Retype Email">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6 js-hide-label">
+                        <label for="inputPassword"><strong>Must</strong>: Length-Min: 5char .. Length-Max: 20char<br>
+                            <strong> Must Contains</strong> :1-capital letter, 1-Special character, at least 1-Number</label>
+                        <input type="text" class="form-control" id="inputPassword" placeholder="Password">
+                    </div>
+
+                    <div class="form-group col-md-6 js-hide-label">
+                        <label for="retypePassword">Retype your Password<br>same values</label>
+                        <input type="text" class="form-control" id="retypePassword" placeholder="Retype Password">
+                    </div>
+
+                </div>
+
+                <!-- Row 2 -->
+                <div class="form-group js-hide-label">
+                    <label for="inputAddress">Address line n°2</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <!-- Row 3 -->
+                <div class="form-group js-hide-label">
+                    <label for="inputAddress2">Address line n°2</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                </div>
+
+                <!-- Row 4 -->
+
+                <div class="form-row">
+                    <div class="form-group col-md-6 js-hide-label">
+                        <label for="inputCity">City</label>
+                        <input type="text" class="form-control" id="inputCity" placeholder="City">
+                    </div>
+
+                    <div class="form-group col-md-6 js-hide-label">
+                        <label for="inputState">State</label>
+                        <input type="text" class="form-control" id="inputState" placeholder="State">
+                    </div>
+
+                    <div class="form-group col-md-6 js-hide-label">
+                        <label for="inputCountry">Country</label>
+                        <input type="text" class="form-control" id="inputCountry" placeholder="Country">
+                    </div>
+
+                    <div class="form-group col-md-2 js-hide-label">
+                        <label for="inputZip">Zip : length:4 :only numbers</label>
+                        <input type="text" class="form-control" id="inputZip" placeholder="Zip code">
+                    </div>
+                </div>
+
+
+                <!-- Row 5 -->
+                <button type="button" class="btn verification text-white">Sign in</button>
+                <button type="reset" class="btn reset text-white">Reset</button>
+            </form>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="form.js"></script>
+</body>
+
+</html>
